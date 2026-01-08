@@ -1,0 +1,9 @@
+---
+const pages = ["index", "about"]
+---
+
+<ul>
+    {pages.map((page) => {
+        const Index = page === "index" ? "/" : `/${page}`;
+        return <li><a href = {Index}>{page}</a></li>})}
+</ul>

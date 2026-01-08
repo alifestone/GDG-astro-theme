@@ -5,20 +5,27 @@ interface Props {
 }
 
 const { name, avatar } = Astro.props;
----
-<div class="grid place-items-center my-2">   
-    <div class="p-4 flex w-[95%] h-35 rounded-[30px] bg-gray-700 text-white">
-        <div class="flex-col w-fit place-items-center items-center">
-            <div class="size-18 rounded-full overflow-hidden p-1 border-white border-2">
-                <div class="size-full rounded-full bg-cover bg-center overflow-hidden"
-                    style={`background-image: url('${avatar}');`}>
-                </div>
+---   
+<div class="p-4 flex w-full h-35 rounded-[30px] bg-[#4A4444] text-white">
+    <!-- Profile -->
+    <div class="flex-col w-fit place-items-center items-center">
+        <!-- Outline Circle -->
+        <div class="size-18 rounded-full overflow-hidden p-1 border-white border-2">
+            <!-- Avatar -->
+            <div class="size-full rounded-full bg-cover bg-center overflow-hidden"
+                style={`background-image: url('${avatar}');`}>
             </div>
-            <div class="text-[24px] font-bold">{name}</div>
         </div>
-        <div class="ml-3 mr-3 w-1 bg-white"></div>
-        <div class="text-[20px] flex-1 h-full p-2 flex items-center">
-            <slot />
-        </div>
+
+        <!-- Name -->
+        <div class="text-[24px] font-bold">{name}</div>
+    </div>
+
+    <!-- Line -->
+    <div class="ml-3 mr-3 w-1 bg-white"></div>
+
+    <!-- Description -->
+    <div class="text-[20px] flex-1 h-full p-2 flex items-center">
+        <slot />
     </div>
 </div>

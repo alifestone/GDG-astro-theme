@@ -1,4 +1,2 @@
 # participants
-- Mahiro
-- lifestone
-- abc
+- Mahiro 
